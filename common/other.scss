@@ -1,0 +1,89 @@
+@import '~@/styles/mixin/index.scss';
+
+.display-none {
+	display: none;
+}
+.hidden {
+	visibility: hidden;
+}
+.pre-wrap {
+	white-space: pre-wrap;
+}
+.pre-line {
+	white-space: pre-line;
+}
+.bold {
+	font-weight: bold;
+}
+.white-bg {
+	background: white;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.o-x-h {
+	overflow-x: hidden;
+}
+.o-y-h {
+	overflow-y: hidden;
+}
+.inline-block {
+	display: inline-block;
+}
+.border-box {
+	box-sizing: border-box;
+}
+.f-l {
+	float: left;
+}
+.f-r {
+	float: right;
+}
+.display-table {
+	display: table;
+}
+.display-table-cell {
+	display: table-cell;
+}
+//hover背景色
+.hover-bg:hover {
+	background-color: #f4f9ff;
+}
+//鼠标显示可点击样式
+.pointer {
+	cursor: pointer;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+// 文字向两侧对齐，对最后一行无效。
+.text-justify {
+	text-align: justify;
+}
+
+
+//纯字母数字换行
+.wbba {
+	word-break: break-all;
+	line-break: anywhere;
+}
+
+.block-center {
+	margin: 0 auto;
+}
+
+// 单行溢出省略
+.text-over-one {
+	@include text-overflow(1);
+}
+
+// chromium内核浏览器的滚动条优化
+.chrome-scrollbar {
+	@include scrollBar();
+}

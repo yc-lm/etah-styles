@@ -1,0 +1,49 @@
+$minOpacity: 0 !default;
+$maxOpacity: 10 !default;
+
+$color-list: (
+                (1, #4c84ff),
+                ('el-inner', $elInnerCol),
+                ('b-title', $bTitleCol),
+                ('b-sub-title', $bSubTitleCol),
+                ('b-content', $bContentCol),
+                ('b-white', $bWhite),
+                ('b-black', $bBlack),
+                ('b-red', $red),
+                ('b-blue', $blue),
+                ('b-green', $green),
+                ('b-orange', $orange),
+                ('light-orange', $lightOrange),
+                ('b-divider', $bDividerCol),
+                ('light-black', $lightBlack),
+                ('light-grey', $lightGrey),
+                ('dark-grey', $darkGrey),
+                ('middle-grey', $middleGrey),
+                ('dark-black', $darkBlack),
+                ('cyan-grey', $cyanGrey),
+) !default;
+
+@each $label, $value in $color-list {
+  .col-#{$label} {
+    color: $value
+  }
+;
+  .bg-#{$label} {
+    background: $value;
+  }
+}
+
+@for $num from $minOpacity through $maxOpacity {
+  .opacity-#{$num} {
+    opacity: $num / 10;
+  }
+}
+
+
+.gray {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}

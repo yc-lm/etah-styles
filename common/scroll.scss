@@ -1,0 +1,121 @@
+/* webkit内核 */
+.scroll_content::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.scroll_content::-webkit-scrollbar-button {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-webkit-scrollbar-track-piece {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-webkit-scrollbar-corner {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-webkit-scrollbar-resizer {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+/* o内核 */
+.scroll_content .-o-scrollbar {
+	-moz-appearance: none !important;
+	background: rgba(0, 255, 0, 0) !important;
+}
+
+.scroll_content::-o-scrollbar-button {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-o-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-o-scrollbar-track-piece {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-o-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-o-scrollbar-corner {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll_content::-o-scrollbar-resizer {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+/* IE10,IE11,IE12 */
+.scroll_content {
+	-ms-scroll-chaining: chained;
+	-ms-overflow-style: none;
+	-ms-content-zooming: zoom;
+	-ms-scroll-rails: none;
+	-ms-content-zoom-limit-min: 100%;
+	-ms-content-zoom-limit-max: 500%;
+	-ms-scroll-snap-type: proximity;
+	-ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+	overflow: auto;
+}
+
+// todo need to support ff
+.style_scroll {
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background-color: hsla(220, 4%, 58%, 0.3);
+		transition: background-color 0.3s;
+
+		&:hover {
+			background: #bbb;
+		}
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #ededed;
+	}
+}
+
+.chrome-scrollbar::-webkit-scrollbar {
+	height: 6px;
+	width: 6px;
+}
+
+.chrome-scrollbar::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.025);
+}
+
+.chrome-scrollbar::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
+	transition: all 0.5s;
+}
+
+.chrome-scrollbar::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.chrome-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.chrome-scrollbar::-webkit-scrollbar-thumb:active {
+	background: rgba(0, 0, 0, 0.4);
+}
