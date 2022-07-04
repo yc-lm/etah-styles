@@ -1,6 +1,6 @@
 {
   "name": "etah-styles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "etah common styles package",
   "main": "index.js",
   "scripts": {
