@@ -6,31 +6,51 @@
     }
 }
 
-@mixin scrollBar {
-    &::-webkit-scrollbar {
-        height: 6px;
-        width: 6px;
+@mixin scrollBar(
+    $col: 0,
+    $width: 6px,
+    $trackOpacity: 0.025,
+    $thumbOpacity: 0.2,
+    $thumbInactive: 0.2,
+    $thumbHover: 0.25,
+    $thumbActive: 0.4
+) {
+    &:hover {
+        &::-webkit-scrollbar {
+            width: #{$width};
+            height: #{$width};
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($col, $col, $col, $thumbOpacity) !important;
+        }
     }
+    &::-webkit-scrollbar {
+        background: rgba(0, 0, 0, 0) !important;
+        width: #{$width};
+        height: #{$width};
+    }
+
     &::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.025);
+        background: rgba(0, 0, 0, 0) !important;
     }
 
     &::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background: rgba(0, 0, 0, 0.2);
-        transition: all 0.5s;
+        //background: rgba($col, $col, $col, $thumbOpacity);
+        //background: rgba(0, 0, 0, 0) !important;
+        background-color: inherit;
     }
 
     &::-webkit-scrollbar-thumb:window-inactive {
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba($col, $col, $col, $thumbInactive);
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: rgba(0, 0, 0, 0.25);
+        background: rgba($col, $col, $col, $thumbHover);
     }
 
     &::-webkit-scrollbar-thumb:active {
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba($col, $col, $col, $thumbActive);
     }
 }
 
@@ -128,4 +148,16 @@
             margin-right: 0;
         }
     }
+}
+
+// 定义字体颜色
+@mixin title-color-opacity($color,$opacity) {
+    color: $color; /*Fallback */
+    color: rgba($color, $opacity/10);
+}
+
+// 定义背景颜色颜色
+@mixin title-background-opacity($color,$opacity) {
+    background-color: $color; /*Fallback */
+    background-color: rgba($color, $opacity/10);
 }

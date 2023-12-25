@@ -1,0 +1,23 @@
+.z-i-min{
+  z-index: -1;
+}
+.z-i-max {
+  z-index: 999;
+}
+.z-i-header{
+  z-index: 100;
+}
+//层级1-3，小于导航 z-i-header，通用于业务页面
+.z-i-level1-lt-header{
+  z-index: 50;
+}
+.z-i-level2-lt-header{
+  z-index: 40;
+}
+.z-i-level3-lt-header{
+  z-index: 30;
+}
+
+.z-i-min{
+  z-index: -1;
+}
