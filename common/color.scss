@@ -1,4 +1,3 @@
-@use 'sass:math';
 @import '../mixin/index.scss';
 $minOpacity: 0 !default;
 $maxOpacity: 10 !default;
@@ -37,7 +36,7 @@ $color-list: (
 
 @for $num from $minOpacity through $maxOpacity {
   .opacity-#{$num} {
-    opacity: math.div($num, 10);
+    opacity: #{$num * 0.1};
   }
 
   // bTitle
