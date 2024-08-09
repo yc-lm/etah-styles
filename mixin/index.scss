@@ -153,11 +153,11 @@
 // 定义字体颜色
 @mixin title-color-opacity($color,$opacity) {
     color: $color; /*Fallback */
-    color: rgba($color, #{$opacity * 0.1});
+    color: rgba($color, $opacity * 0.1);
 }
 
 // 定义背景颜色颜色
 @mixin title-background-opacity($color,$opacity) {
     background-color: $color; /*Fallback */
-    background-color: rgba($color, #{$opacity * 0.1});
+    background-color: rgba($color, $opacity * 0.1);
 }
